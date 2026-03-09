@@ -1,0 +1,14 @@
+defaults:
+  - _self_
+  - data: tcsa_polar
+  - model: profiler_ir1
+  - paths: default
+
+# Checkpoint to load (required). Set via CLI (ckpt_path=path/to.ckpt) or via CKPT_PATH env var.
+# Paths with '=' in the filename (e.g. epoch=29-step=2280.ckpt) must use env: CKPT_PATH=path/to/epoch=29-step=2280.ckpt
+ckpt_path: null
+
+# Where to write outputs (defaults to Hydra run dir)
+# paths.output_dir is set by Hydra; override with e.g. paths.output_dir=./predictions
+predict:
+  output_file: profiles.pt

@@ -1,0 +1,8 @@
+wandb:
+  _target_: lightning.pytorch.loggers.wandb.WandbLogger
+  save_dir: "${paths.output_dir}"
+  id: null # pass correct id to resume experiment!
+  anonymous: null # enable anonymous logging
+  project: "tcsa-lightning"
+  log_model: False
+  prefix: ""

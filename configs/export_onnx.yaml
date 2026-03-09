@@ -1,0 +1,18 @@
+defaults:
+  - _self_
+  - model: profiler_ir1
+  - paths: default
+
+# Checkpoint to load (required). Set via CLI or CKPT_PATH env var.
+ckpt_path: null
+
+# ONNX export options
+export:
+  output_file: model.onnx
+  opset_version: 18
+  # Optional: set for fixed-size graph (faster inference). Omit for dynamic H/W.
+  batch_size: 1
+  num_channels: 1
+  image_height: 180
+  image_width: 103
+

@@ -1,0 +1,13 @@
+# Profiler using IR1 channel only (matches TF profiler_4_1)
+_target_: dsat_lightning.model.profiler_module.ProfilerModule
+input_channels: [0]
+num_regions: 6
+
+loss_function: MAE
+loss_ratio:
+  Vmax: 0.125
+  profile: 1.0
+  RMW: 0.0125
+
+blending_num: 10
+lr: 0.001

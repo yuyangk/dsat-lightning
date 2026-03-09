@@ -1,0 +1,74 @@
+images/
+
+############################
+# Python / Build artifacts #
+############################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+#################
+# Virtual envs  #
+#################
+.venv/
+venv/
+env/
+.envrc
+.python-version
+
+#############
+# IDE files #
+#############
+.vscode/
+.idea/
+*.iml
+
+########################
+# Hydra / Lightning IO #
+########################
+multirun/
+outputs/
+.hydra/
+logs/
+
+##########
+# Weights #
+##########
+checkpoints/
+*.ckpt
+*.onnx
+*.pt
+*.pth
+
+########
+# DVC  #
+########
+.dvc/
+.dvcignore
+
+###########
+# Data    #
+###########
+data/
+datasets/
+*.h5
+*.hdf5
+
+###########
+# wandb   #
+###########
+wandb/
+
+###########
+# dotenv  #
+###########
+.env
+*.env.local
+

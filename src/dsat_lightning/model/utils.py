@@ -21,7 +21,8 @@ def profiles_to_metrics(
     radii = torch.arange(0, 751, 5, dtype=profiles.dtype, device=profiles.device)
     r34 = ((profiles >= 34.0).float() * radii).max(dim=1, keepdim=True).values
 
-    weights = torch.softmax(profiles, dim=1)
-    rmw = (weights * radii).sum(dim=1, keepdim=True)
+    # weights = torch.softmax(profiles, dim=1)
+    # rmw = (weights * radii).sum(dim=1, keepdim=True)
+    rmw = radii[profiles.argmax(dim=1, keepdim=True)]
 
     return vmax, r34, rmw
